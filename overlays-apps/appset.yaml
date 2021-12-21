@@ -7,4 +7,4 @@ spec:
   source:
     repoURL: git@github.com:evercast-chris/argocd-example-apps.git
     targetRevision: master
-    path: overlays-app
+    path: overlays-apps
