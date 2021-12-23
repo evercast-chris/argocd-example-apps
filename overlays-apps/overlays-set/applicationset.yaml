@@ -1,4 +1,3 @@
-
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
@@ -8,7 +7,6 @@ spec:
   generators:
   - list:
       elements:
-     # v0.2.0+ form - does not require cluster/URL keys (but are still supported)
       - overlay: qa
         gitRepo: git@github.com:evercast-chris/argocd-example-apps.git
         appPath: overlays
@@ -23,16 +21,4 @@ spec:
         url: https://kubernetes.default.svc
   template:
     metadata:
-      name: 'demo-{{cluster}}'
-    spec:
-      project: default
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-      source:
-        repoURL: '{{gitRepo}}'
-        targetRevision: '{{appBranch}}'
-        path: '{{appPath}}/{{overlay}}'
-      destination:
-        server: '{{url}}'
+      name: 'test-{{cluster}}'
