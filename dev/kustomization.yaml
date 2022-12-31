@@ -1,5 +1,4 @@
-image: anaisurlichs/react-example-app:2.0.0
-namePrefix: image-test-
+namePrefix: chris-test-
 
 resources:
 - service.yaml
