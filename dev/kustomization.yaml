@@ -1,4 +1,6 @@
-namePrefix: chris-test-
+replicas:
+- name: myapp
+  count: 4
 
 resources:
 - service.yaml
