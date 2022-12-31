@@ -1,4 +1,4 @@
-namePrefix: kustomize-
+replicas: 1
 
 resources:
 - deployment.yaml
