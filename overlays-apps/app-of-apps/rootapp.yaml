@@ -4,6 +4,7 @@ metadata:
   name: parent-app
   namespace: argocd
 spec:
+  project: default
   source:
     repoURL: git@github.com:evercast-chris/argocd-example-apps.git
     targetRevision: master
